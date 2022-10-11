@@ -31,6 +31,8 @@ public class AddMemoryActivity extends AppCompatActivity implements AdapterView.
         // this attaches my custom row design (how I want each row to look)
         adapter.setDropDownViewResource(R.layout.custom_spinner_dropdown_row);
 
+
+
         spinner.setAdapter(adapter);
         spinner.setOnItemSelectedListener(this);
     }

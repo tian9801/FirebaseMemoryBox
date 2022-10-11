@@ -45,6 +45,8 @@ public class SignInActivity extends AppCompatActivity {
         if (getValues()) {      // get username and password
             // Try to create an account using auth
             // if successful, switch to next activity
+            Intent intent = new Intent(SignInActivity.this, SelectActionActivity.class);
+            startActivity(intent);
 
         }
     }
