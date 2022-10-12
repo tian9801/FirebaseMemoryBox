@@ -1,7 +1,5 @@
 package com.example.signinactivity;
 
-import static com.example.signinactivity.SignInActivity.firebaseHelper;
-
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -24,15 +22,13 @@ public class SelectActionActivity extends AppCompatActivity {
 
     public void addMemories(View view) {
         Intent intent = new Intent(SelectActionActivity.this, AddMemoryActivity.class);
-        setContentView(R.layout.activity_add_memory);
+        startActivity(intent);
     }
 
     public void logOutClicked(View view) {
-        firebaseHelper.logOutUser();
+        SignInActivity.firebaseHelper.logOutUser();
         Log.i(TAG, "user logged out");
         Intent intent = new Intent(SelectActionActivity.this, SignInActivity.class);
         startActivity(intent);
     }
 }
-
-

@@ -20,10 +20,12 @@
         app:layout_constraintVertical_bias="0.19" />
 
     <Spinner
-        android:id="@+id/addMemorySpinner"
+        android:id="@+id/memorySpinner"
         android:layout_width="338dp"
         android:layout_height="69dp"
+        android:onClick="addMemories"
         android:spinnerMode="dropdown"
+        android:entries="@array/memoryRating"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.493"
