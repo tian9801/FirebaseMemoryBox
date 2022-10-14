@@ -26,7 +26,7 @@ public class AddMemoryActivity extends AppCompatActivity implements AdapterView.
         this.spinner = spinner;
         this.memoryName = memoryName;
         this.memoryDesc = memoryDesc;
-        this.spinnerSelectedText = spinnerSelectedText;
+        this.spinnerSelectedText = spinnerSelectedText; 
         memoryName = findViewById(R.id.addMemoryName);
         memoryDesc = findViewById(R.id.addMemoryDescription);
     }
