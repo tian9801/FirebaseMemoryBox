@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">SignInActivity</string>
     <string-array name="memoryRating">
+        <item>Select a rating.</item>
         <item>5. The best</item>
         <item>4. Pretty good</item>
         <item>3. Average</item>

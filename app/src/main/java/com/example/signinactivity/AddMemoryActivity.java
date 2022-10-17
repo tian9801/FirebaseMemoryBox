@@ -10,6 +10,8 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import com.google.firebase.firestore.FirebaseFirestore;
+
 public class AddMemoryActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener  {
     Spinner spinner;
     EditText memoryName, memoryDesc;
@@ -20,21 +22,18 @@ public class AddMemoryActivity extends AppCompatActivity implements AdapterView.
 
     // How to style the spinner
     // https://www.youtube.com/watch?v=7tnlh1nVkuE
-
-
-    public AddMemoryActivity(Spinner spinner, EditText memoryName, EditText memoryDesc, String spinnerSelectedText) {
-        this.spinner = spinner;
-        this.memoryName = memoryName;
-        this.memoryDesc = memoryDesc;
-        this.spinnerSelectedText = spinnerSelectedText; 
-        memoryName = findViewById(R.id.addMemoryName);
-        memoryDesc = findViewById(R.id.addMemoryDescription);
-    }
+    public final String TAG = "Denna";
+    FirebaseFirestore db;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_memory);
+
+        memoryName = findViewById(R.id.addMemoryName);
+        memoryDesc = findViewById(R.id.addMemoryDescription);
+
+
 
         // this attaches my spinner design (spinner_list.xml) and my array of spinner choices(R.array.memoryRating)
         spinner = findViewById(R.id.memorySpinner);
@@ -48,6 +47,7 @@ public class AddMemoryActivity extends AppCompatActivity implements AdapterView.
 
         spinner.setAdapter(adapter);
         spinner.setOnItemSelectedListener(this);
+
     }
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
@@ -63,12 +63,12 @@ public class AddMemoryActivity extends AppCompatActivity implements AdapterView.
         String memDesc = memoryDesc.getText().toString();
         int memoryRatingNum = 0;
         // This will take the option they clicked on and ensure it is a number.
-// My options went from 5 to 1, so that is why I have it adjusted with 6-i
-// I also had an instruction statement as my first line in my string array
-// ADJUST THIS LOOP TO MATCH YOUR CODE!
+        // My options went from 5 to 1, so that is why I have it adjusted with 6-i
+        // I also had an instruction statement as my first line in my string array
+        // ADJUST THIS LOOP TO MATCH YOUR CODE!
 
-// Note the syntax here for how to access an index of a string array within
-// the java
+        // Note the syntax here for how to access an index of a string array within
+        // the java
         for (int i = 1; i < 6; i++) {
             if (spinnerSelectedText.equals(getResources().
                     getStringArray(R.array.memoryRating)[i])) {

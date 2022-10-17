@@ -21,7 +21,8 @@ public class SelectActionActivity extends AppCompatActivity {
     }
 
     public void addMemories(View view) {
-        setContentView(R.layout.activity_add_memory);
+        Intent intent = new Intent(SelectActionActivity.this, AddMemoryActivity.class);
+        startActivity(intent);
     }
 
     public void logOutClicked(View view) {

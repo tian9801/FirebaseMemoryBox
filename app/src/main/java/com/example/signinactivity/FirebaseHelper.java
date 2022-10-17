@@ -163,12 +163,12 @@ public class FirebaseHelper {
 
 
 
-/* https://www.youtube.com/watch?v=0ofkvm97i0s
-This video is good!!!   Basically he talks about what it means for tasks to be asynchronous
-and how you can create an interface and then using that interface pass an object of the interface
-type from a callback method and access it after the callback method.  It also allows you to delay
-certain things from occurring until after the onSuccess is finished.
-*/
+    /* https://www.youtube.com/watch?v=0ofkvm97i0s
+    This video is good!!!   Basically he talks about what it means for tasks to be asynchronous
+    and how you can create an interface and then using that interface pass an object of the interface
+    type from a callback method and access it after the callback method.  It also allows you to delay
+    certain things from occurring until after the onSuccess is finished.
+    */
 
     private void readData(FirestoreCallback firestoreCallback) {
         myMemories.clear();        // empties the AL so that it can get a fresh copy of data

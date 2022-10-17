@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<TextView android:id="@+id/priorityChosen"
+<TextView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/priorityChosen"
     style="?attr/spinnerDropDownItemStyle"
     android:layout_width="@dimen/memEditTextWidth"
     android:layout_height="@dimen/spinnerHeight"
@@ -8,5 +10,5 @@
     android:text="My Choice"
     android:textColor="@color/primaryColor"
     android:textSize="@dimen/fontRegular"
-    xmlns:android="http://schemas.android.com/apk/res/android"
+
     />
