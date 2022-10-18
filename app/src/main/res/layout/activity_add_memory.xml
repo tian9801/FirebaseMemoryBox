@@ -62,9 +62,8 @@
 
     <Spinner
         android:id="@+id/memorySpinner"
-        android:layout_width="409dp"
-        android:layout_height="48dp"
-        android:onClick="addMemories"
+        android:layout_width="362dp"
+        android:layout_height="46dp"
         android:entries="@array/memoryRating"
         android:spinnerMode="dialog"
         app:layout_constraintBottom_toTopOf="@+id/addMemoryButton"
